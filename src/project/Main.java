@@ -10,14 +10,17 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
-
 public class Main extends Application {
-
+	
+	/**
+	 * What does it do?
+	 * @param s
+	 * @throws Exception
+	 */
 	@Override
 	public void start(Stage s) throws Exception {
-		// TODO Auto-generated method stub
   		Box bR = new Box();
+  		Ball ball = new Ball();
  		
  		bR.setOnKeyPressed(e->{
  			
@@ -37,17 +40,16 @@ public class Main extends Application {
 			}
 		});
  		
- 		
  		Scene scene = new Scene(bR,600, 600);
 		scene.setFill(Color.BLACK);
 		s.setScene(scene);
 		s.show();
 		
 		bR.requestFocus();
+		ball.requestFocus();
 	}
 
 	public static void main(String[] args) {
 		launch(args);
 	}
-
 }

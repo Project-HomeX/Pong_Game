@@ -17,14 +17,21 @@ public class Box extends Pane {
 	
 	Rectangle rectLeft = new Rectangle(leftX, leftY, width, height);
 	Rectangle rectRight = new Rectangle(rightX, rightY, width, height);
-
+	
+	/**
+	 * What does it do?
+	 */
 	Box() {
 		rectLeft.setFill(Color.WHITE);
 		rectRight.setFill(Color.WHITE);
 		
 		getChildren().addAll(rectRight,rectLeft);
 	}
-
+	
+	/**
+	 * What does it do?
+	 * @param pos
+	 */
 	public void moveBoxUp(String pos) {
  		if (pos.equals("left")) {
 			if (leftY > 0){
@@ -42,6 +49,10 @@ public class Box extends Pane {
 		}
 	}
 	
+	/**
+	 * What does it do?
+	 * @param pos
+	 */
 	public void moveBoxDown(String pos) {
  		if (pos.equals("left")) {
 			if (leftY + height < getHeight()) {
