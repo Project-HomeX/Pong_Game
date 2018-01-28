@@ -1,6 +1,5 @@
 package project;
 
-import javafx.animation.Timeline;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -19,7 +18,7 @@ public class Box extends Pane {
 	Rectangle rectRight = new Rectangle(rightX, rightY, width, height);
 	
 	/**
-	 * What does it do?
+	 * Constructor
 	 */
 	Box() {
 		rectLeft.setFill(Color.WHITE);
@@ -29,7 +28,7 @@ public class Box extends Pane {
 	}
 	
 	/**
-	 * What does it do?
+	 * Moves box's up
 	 * @param pos
 	 */
 	public void moveBoxUp(String pos) {
@@ -50,7 +49,7 @@ public class Box extends Pane {
 	}
 	
 	/**
-	 * What does it do?
+	 * Moves box's down
 	 * @param pos
 	 */
 	public void moveBoxDown(String pos) {
