@@ -19,6 +19,8 @@ public class Main extends Application {
 	 */
 	@Override
 	public void start(Stage s) throws Exception {
+		Pane p = new Pane();
+		//p.setPrefSize(600,600);
   		Box bR = new Box();
   		Ball ball = new Ball();
  		
@@ -40,13 +42,14 @@ public class Main extends Application {
 			}
 		});
  		
+ 		//p.getChildren().addAll(bR,ball);
+ 		bR.getChildren().add(ball);
  		Scene scene = new Scene(bR,600, 600);
 		scene.setFill(Color.BLACK);
 		s.setScene(scene);
 		s.show();
 		
 		bR.requestFocus();
-		ball.requestFocus();
 	}
 
 	public static void main(String[] args) {
