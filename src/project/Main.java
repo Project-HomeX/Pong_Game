@@ -29,10 +29,10 @@ public class Main extends Application {
 					bR.moveBoxUp("right");
 			}
 			
-			if(e.getText().equals("q")){
+			if(e.getText().equals("w")){
 				bR.moveBoxUp("left");
 			}
-			else if(e.getText().equals("a")){
+			else if(e.getText().equals("s")){
 				bR.moveBoxDown("left");
 			}
 		});
