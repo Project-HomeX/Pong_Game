@@ -16,7 +16,7 @@ public class Main extends Application {
 	public void start(Stage s) throws Exception {
   		Box bR = new Box();
   		Ball ball = new Ball();
- 		
+ 		bR.getChildren().add(ball);
  		bR.setOnKeyPressed(e->{
  			
 			if(e.getCode().toString().equals("DOWN")){
@@ -41,7 +41,6 @@ public class Main extends Application {
 		s.show();
 		
 		bR.requestFocus();
-		ball.requestFocus();
 	}
 
 	public static void main(String[] args) {
