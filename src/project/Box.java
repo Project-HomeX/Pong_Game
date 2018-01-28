@@ -5,6 +5,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * @author GUTIBSITU
+ *
+ */
 public class Box extends Pane {
 	private double width = 50;
 	private double height = 150;
@@ -70,4 +74,13 @@ public class Box extends Pane {
 			
 		}
 	}
+	public Rectangle getLeftBox(){
+		return rectLeft;	
+	}
+	public Rectangle getRightBox(){
+		return rectLeft;
+		
+	}
+	
+	
 }
