@@ -5,10 +5,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Box extends Pane {
-	private double width = 50;
+	private double width = 35;
 	private double height = 150;
 	
-	private double rightX = 540;
+	private double rightX = 555;
 	private double rightY = 10;
 	
 	private double leftX = 10;
