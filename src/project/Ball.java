@@ -36,7 +36,7 @@ public class Ball extends Pane{
 	
 	//I CANNOT get this method to get constructed in the constructor above. If i construct it i dont't have to do anything in the Main class
 	// When there is a Collision with the box's the ball goes back
-	public void boxCollision(Box box1){
+	public void boxCollision(Paddles box1){
 		if(xCord <= 45) {
 			if(yCord >= box1.rectLeft.getY() && yCord <= box1.rectLeft.getY() + 150)
 				xV = -xV;

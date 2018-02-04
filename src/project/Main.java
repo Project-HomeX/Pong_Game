@@ -8,13 +8,13 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	
 	/**
-	 * Creates a stage, and runs either the box's or the ball
+	 * Creates a stage, and runs the ball and box class
 	 * @param s
 	 * @throws Exception
 	 */
 	@Override
 	public void start(Stage s) throws Exception {
-  		Box bR = new Box();
+		Paddles bR = new Paddles();
   		Ball ball = new Ball();
  		bR.getChildren().add(ball);
  		bR.setOnKeyPressed(e->{
