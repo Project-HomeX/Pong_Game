@@ -1,49 +1,48 @@
 package project;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
+import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class Main extends Application {
-	
-	/**
-	 * Creates a stage, and runs the ball and box class
-	 * @param s
-	 * @throws Exception
-	 */
+public class Main extends Applet implements KeyListener{
+	final int WIDTH = 800, HEIGHT = 550;
+
+
+	//basically the constructor
+	public void setup() {
+		this.resize(WIDTH, HEIGHT);
+	}
+
+	public void paint(Graphics graphics) {
+
+	}
+
+	public void update(Graphics graphics) {
+
+	}
+
+	public void run() {
+
+	}
+
 	@Override
-	public void start(Stage s) throws Exception {
-		Paddles bR = new Paddles();
-  		Ball ball = new Ball();
- 		bR.getChildren().add(ball);
- 		bR.setOnKeyPressed(e->{
- 			
-			if(e.getCode().toString().equals("DOWN")){
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
 
-				bR.moveBoxDown("right");
-			}
-			else if(e.getCode().toString().equals("UP")){
-					bR.moveBoxUp("right");
-			}
-			
-			if(e.getText().equals("w")){
-				bR.moveBoxUp("left");
-			}
-			else if(e.getText().equals("s")){
-				bR.moveBoxDown("left");
-			}
-		});
- 		
- 		Scene scene = new Scene(bR,600, 600);
-		scene.setFill(Color.BLACK);
-		s.setScene(scene);
-		s.show();
-		
-		bR.requestFocus();
 	}
 
-	public static void main(String[] args) {
-		launch(args);
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+
 	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
 }
