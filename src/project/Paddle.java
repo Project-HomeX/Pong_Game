@@ -1,35 +1,221 @@
+
 package project;
 
-import java.awt.Color;
-import java.awt.Graphics;
 
-public class Paddle {
 
-	private double y, speedY;
-	private int x, playerSide, w, h;
 
-	//Constructor
-	public Paddle() {
-		y = 231;
-		speedY = 0;
-		//Setting which side
-		if(playerSide == 1) {
-			x = 745;
+
+
+
+
+
+import javafx.scene.layout.Pane;
+
+
+import javafx.scene.paint.Color;
+
+
+import javafx.scene.shape.Rectangle;
+
+
+
+
+
+
+
+public class Paddle extends Pane {
+
+
+	private double width = 35;
+
+
+	private double height = 150;
+
+
+
+
+
+	private double rightX = 555;
+
+
+	private double rightY = 10;
+
+
+
+
+
+	private double leftX = 10;
+
+
+	private double leftY = 10;
+
+
+
+
+
+	Rectangle rectLeft = new Rectangle(leftX, leftY, width, height);
+
+
+	Rectangle rectRight = new Rectangle(rightX, rightY, width, height);
+
+
+
+
+
+	/**
+
+
+	 * Constructor
+
+
+	 */
+
+
+	Paddle() {
+
+
+		rectLeft.setFill(Color.WHITE);
+
+
+		rectRight.setFill(Color.WHITE);
+
+
+
+
+
+		getChildren().addAll(rectRight,rectLeft);
+
+
+	}
+
+
+
+
+
+	/**
+
+
+	 * Moves box's up
+
+
+	 * @param pos
+
+
+	 */
+
+
+	public void moveBoxUp(String pos) {
+
+
+		if (pos.equals("left")) {
+
+
+			if (leftY > 0){
+
+
+				this.leftY -= 22;
+
+
+				rectLeft.setY(leftY);
+
+
+			}
+
+
 		}
-		else {
-			x = 30;
+
+
+
+
+
+		if(pos.equals("right")){
+
+
+			if (rightY > 0){
+
+
+				this.rightY -= 22;
+
+
+				rectRight.setY(rightY);
+
+
+			}
+
+
+
+
+
 		}
-	}
 
-	public void draw(Graphics graphics) {
-		graphics.setColor(Color.WHITE);
-		graphics.fillRect(x, (int)y, 25, 90);
-	}
-	public void move() {
 
 	}
-	public int getY() {
-		return (int) y;
+
+
+
+
+
+	/**
+
+
+	 * Moves box's down
+
+
+	 * @param pos
+
+
+	 */
+
+
+	public void moveBoxDown(String pos) {
+
+
+		if (pos.equals("left")) {
+
+
+			if (leftY + height < getHeight()) {
+
+
+				this.leftY += 22;
+
+
+				rectLeft.setY(leftY);
+
+
+			}
+
+
+
+
+
+		}
+
+
+
+
+
+		if(pos.equals("right")){
+
+
+			if (rightY + height < getHeight()) {
+
+
+				this.rightY += 22;
+
+
+				rectRight.setY(rightY);
+
+
+			}
+
+
+
+
+
+		}
+
+
 	}
+
 
 }
