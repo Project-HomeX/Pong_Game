@@ -8,7 +8,9 @@ public class Paddle {
 	private double y, speedY;
 	private int x, playerSide, w, h;
 
-	//Constructor
+	/**
+	 * constructor
+	 */
 	public Paddle() {
 		y = 231;
 		speedY = 0;
@@ -21,15 +23,27 @@ public class Paddle {
 		}
 	}
 
+	/**
+	 * Draws the shape
+	 * @param graphics
+	 */
 	public void draw(Graphics graphics) {
 		graphics.setColor(Color.WHITE);
 		graphics.fillRect(x, (int)y, 25, 90);
 	}
+
+	/**
+	 * Move the ball
+	 */
 	public void move() {
 
 	}
+
+	/**
+	 * get y
+	 * @return
+	 */
 	public int getY() {
 		return (int) y;
 	}
-
 }

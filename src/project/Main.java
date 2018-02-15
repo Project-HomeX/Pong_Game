@@ -10,35 +10,60 @@ public class Main extends Applet implements KeyListener{
 	final int WIDTH = 800, HEIGHT = 550;
 
 
-	//basically the constructor
+	/**
+	 * basically the constructor
+	 */
 	public void setup() {
 		this.resize(WIDTH, HEIGHT);
 	}
 
+	/**
+	 * Draws the graphics
+	 * @param graphics
+	 */
 	public void paint(Graphics graphics) {
 
 	}
 
+	/**
+	 * Updates
+	 * @param graphics
+	 */
 	public void update(Graphics graphics) {
 
 	}
 
+	/**
+	 * Runs the objects/scene
+	 */
 	public void run() {
 
 	}
 
+	/**
+	 * Key Typed
+	 * @param e
+	 */
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * Conditions when key's are pressed
+	 * @param e
+	 */
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 
 	}
 
+	/**
+	 * Conditions for when the key's are released
+	 * @param e
+	 */
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
