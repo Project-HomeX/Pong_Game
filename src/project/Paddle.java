@@ -33,7 +33,7 @@ public class Paddle {
 	}
 
 	/**
-	 * Move the ball
+	 * conditions to move the paddle
 	 */
 	public void move() {
 

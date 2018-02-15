@@ -1,7 +1,6 @@
 package project;
 
 import java.applet.Applet;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -37,7 +36,7 @@ public class Main extends Applet implements KeyListener{
 	 * Runs the objects/scene
 	 */
 	public void run() {
-
+		//code
 	}
 
 	/**
@@ -46,8 +45,7 @@ public class Main extends Applet implements KeyListener{
 	 */
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-
+		//code
 	}
 
 	/**
@@ -56,8 +54,7 @@ public class Main extends Applet implements KeyListener{
 	 */
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-
+		//code
 	}
 
 	/**
@@ -66,8 +63,6 @@ public class Main extends Applet implements KeyListener{
 	 */
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-
+		//code
 	}
-
 }
