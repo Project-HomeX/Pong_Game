@@ -1,19 +1,25 @@
 package project;
 
 import java.applet.Applet;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Main extends Applet implements KeyListener{
 	final int WIDTH = 800, HEIGHT = 550;
-
+	Paddle p1;
+	Thread thread;
 
 	/**
 	 * basically the constructor
 	 */
-	public void setup() {
+	public void init() {
 		this.resize(WIDTH, HEIGHT);
+		p1 = new Paddle(1);
+
+		this.addKeyListener(this);
+		thread = new Thread((Runnable) this);
+		thread.start();
 	}
 
 	/**
@@ -21,7 +27,9 @@ public class Main extends Applet implements KeyListener{
 	 * @param graphics
 	 */
 	public void paint(Graphics graphics) {
-
+		graphics.setColor(Color.BLACK);
+		graphics.fillRect(0,0, WIDTH, HEIGHT);
+		p1.draw(graphics);
 	}
 
 	/**
@@ -29,7 +37,7 @@ public class Main extends Applet implements KeyListener{
 	 * @param graphics
 	 */
 	public void update(Graphics graphics) {
-
+		paint(graphics);
 	}
 
 	/**
@@ -37,6 +45,22 @@ public class Main extends Applet implements KeyListener{
 	 */
 	public void run() {
 		//code
+		for (;;) {
+
+
+
+
+
+			repaint();
+			//Thread sleep: 10 millis
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+
+		}
 	}
 
 	/**
@@ -55,6 +79,14 @@ public class Main extends Applet implements KeyListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		//code
+
+		//Player 1 keys
+		if(e.getKeyCode() == KeyEvent.VK_W) { // VK -> Means Virtual Keyboard, Were "UP" is were you specify the key you will press
+			p1.setUp(true);
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_S) {
+			p1.setDown(true);
+		}
 	}
 
 	/**
@@ -63,6 +95,12 @@ public class Main extends Applet implements KeyListener{
 	 */
 	@Override
 	public void keyReleased(KeyEvent e) {
-		//code
+		//Player 1 keys
+		if(e.getKeyCode() == KeyEvent.VK_W) { // VK -> Means Virtual Keyboard, Were "UP" is were you specify the key you will press
+			p1.setUp(false);
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_S) {
+			p1.setDown(false);
+		}
 	}
 }
